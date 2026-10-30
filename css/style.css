@@ -1,4 +1,4 @@
-/* Общие значения для макета 03_Finaly. */
+
 :root {
   --page: #eeebe2;
   --surface: #faf8f4;
@@ -28,7 +28,7 @@ button:active, .primary-button:active { transform: translateY(1px); }
 button:disabled { opacity: .5; cursor: not-allowed; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* Шапка: Flexbox. */
+
 .header { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 102px; padding: 26px max(104px, calc((100% - 1232px) / 2)) 0 max(92px, calc((100% - 1256px) / 2)); background: #fafaf6; }
 .header-left, .navigation { display: flex; align-items: center; }
 .header-left { gap: 24px; }
@@ -41,13 +41,13 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 .navigation button { padding: 0; border: 0; background: transparent; color: var(--muted); }
 .navigation .register-button { border-radius: 8px; background: var(--brown); color: #f5f1e9; padding: 14px 20px; line-height: 24px; }
 
-/* Главный экран. */
+
 .hero { order: 0; text-align: center; padding: 98px 76px 0 24px; }
 .hero h1 { margin: 0 0 30px; font: 400 76px/1.05 var(--serif); }
 .hero p { margin: 0 auto 34px; font-size: 24px; line-height: 1.5; font-weight: 300; }
 .primary-button { display: inline-flex; align-items: center; justify-content: center; width: 308px; height: 70px; padding: 0 20px; border-radius: 8px; background: var(--brown); color: #f7f2eb; font-size: 23px; }
 
-/* Поиск. В нижней панели глобус виден только на телефоне. */
+
 .search-section { order: 2; padding: 187px 24px 16px; }
 .search-box { width: 100%; max-width: 868px; height: 324px; margin: auto; border: 4px solid var(--brown); border-radius: 72px; background: var(--brown); overflow: hidden; }
 .search-top { height: 70px; }
@@ -58,12 +58,12 @@ textarea { display: block; width: 100%; height: 170px; padding: 28px 56px; margi
 .search-button svg { width: 28px; height: 28px; }
 .globe { display: none; }
 
-/* Фильтры: размеры кнопок различаются, как в Figma. */
+
 .filters { order: 3; display: grid; grid-template-columns: 144fr 306fr 208fr 246fr 310fr; gap: 30px; padding: 32px 50px; border-top: 1px solid #a9a295; border-bottom: 1px solid #a9a295; }
 .filter { min-width: 0; height: 68px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--chip); color: #151412; font-size: 21px; }
 .filter.active { background: var(--brown); color: #f6f0e8; }
 
-/* Карточки: Grid с двумя колонками. */
+
 .sources { order: 4; padding: 133px 68px 134px; }
 .cards-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; row-gap: 40px; }
 .card { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; min-width: 0; min-height: 174px; padding: var(--space); border: 1px solid #e1d9cc; border-radius: var(--card-radius); background: var(--surface); }
@@ -80,7 +80,7 @@ textarea { display: block; width: 100%; height: 170px; padding: 28px 56px; margi
 .export-button { border: 0; background: var(--chip); }
 .rating { white-space: nowrap; color: #655b4e; font: 28px var(--serif); }
 
-/* Подвал. */
+
 .footer { min-height: 431px; padding: 72px max(8.6%, calc((100% - 1192px) / 2)) 100px; background: #464646; color: #bdbdbd; }
 .footer-inner { max-width: 1192px; margin: auto; }
 .footer h2 { margin: 0 0 36px; font: 300 32px/48px var(--font); }
@@ -103,7 +103,7 @@ textarea { display: block; width: 100%; height: 170px; padding: 28px 56px; margi
 
 }
 
-/* Макет Mobile: 390 px, пять карточек. */
+
 @media (max-width: 600px) {
   .header { height: 84px; padding: 0 14px 0 28px; gap: 16px; }
   .header-left { gap: 6px; }
@@ -152,7 +152,7 @@ textarea { display: block; width: 100%; height: 170px; padding: 28px 56px; margi
 
 }
 
-/* На узких телефонах сохраняем две строки фильтров без переполнения. */
+
 @media (max-width: 389px) {
   .header { padding-left: 20px; gap: 8px; }
   .navigation { gap: 8px; }
