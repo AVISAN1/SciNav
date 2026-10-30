@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SciNav — Главная</title>
+  
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-btn" aria-label="Меню">☰</button>
+      <a href="index.html" class="logo">SciNav</a>
+    </div>
+    <nav class="header-nav">
+      <a href="#about">о проекте</a>
+      <a href="#login">Войти</a>
+      <a href="#register" class="btn btn-primary">Зарегистрируйтесь</a>
+    </nav>
+  </header>
+
+  <main>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Хватит искать<br>источники вручную</h1>
+    <p>От темы до готового списка литературы — без ручного поиска по десяткам баз.</p>
+    <a href="#sources" class="btn btn-primary">Попробуйте сейчас</a>
+  </section>
+
+  <!-- Search -->
+  <section class="search-section" id="sources" aria-labelledby="search-heading">
+    <h2 class="visually-hidden" id="search-heading">Поиск источников</h2>
+    <form class="search-box" novalidate>
+      <div class="search-top"></div>
+      <div class="search-input-wrap">
+        <textarea id="topic" name="topic" required aria-describedby="search-error" aria-label="Тема исследования" class="search-input" placeholder="Введите тему исследования..." rows="3" spellcheck="false">Влияние ии на дизайн.</textarea>
+        <span class="search-globe" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="3.5" ry="9"/><path d="M3 12h18"/></svg></span><button type="submit" class="search-btn" aria-label="Найти">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+    <p class="field-error" id="search-error" role="alert" hidden></p>
+  </section>
+
+  <!-- Filters -->
+  <div class="filters">
+    <button class="filter-btn active" type="button" aria-pressed="true">Все</button>
+    <button class="filter-btn" type="button" aria-pressed="false">Популярное</button>
+    <button class="filter-btn" type="button" aria-pressed="false">Новое</button>
+    <button class="filter-btn" type="button" aria-pressed="false">По дате</button>
+    <button class="filter-btn" type="button" aria-pressed="false">По релевантности</button>
+  </div>
+
+  <!-- Cards -->
+  <section class="cards-section" aria-labelledby="results-heading">
+    <h2 class="visually-hidden" id="results-heading">Найденные источники</h2>
+    <div class="cards-grid">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Влияние социальных сетей на учебную мотивацию студентов</h3>
+            <p class="card-meta">А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm">Добавить в таблицу</button>
+            <button class="btn btn-secondary btn-sm">Экспорт</button>
+          </div>
+          <span class="card-rating">8/10</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Влияние социальных сетей на учебную мотивацию студентов</h3>
+            <p class="card-meta">А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm">Добавить в таблицу</button>
+            <button class="btn btn-secondary btn-sm">Экспорт</button>
+          </div>
+          <span class="card-rating">8/10</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Влияние социальных сетей на учебную мотивацию студентов</h3>
+            <p class="card-meta">А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm">Добавить в таблицу</button>
+            <button class="btn btn-secondary btn-sm">Экспорт</button>
+          </div>
+          <span class="card-rating">8/10</span>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Влияние социальных сетей на учебную мотивацию студентов</h3>
+            <p class="card-meta">А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm">Добавить в таблицу</button>
+            <button class="btn btn-secondary btn-sm">Экспорт</button>
+          </div>
+          <span class="card-rating">8/10</span>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Влияние социальных сетей на учебную мотивацию студентов</h3>
+            <p class="card-meta">А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm">Добавить в таблицу</button>
+            <button class="btn btn-secondary btn-sm">Экспорт</button>
+          </div>
+          <span class="card-rating">8/10</span>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Влияние социальных сетей на учебную мотивацию студентов</h3>
+            <p class="card-meta">А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-sm">Добавить в таблицу</button>
+            <button class="btn btn-secondary btn-sm">Экспорт</button>
+          </div>
+          <span class="card-rating">8/10</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  </main>
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="footer-inner">
+      
+      <h2 class="visually-hidden">О проекте</h2>
+      <p>
+        SciNav — навигатор по научным источникам для курсовых, дипломов и статей.
+        Подбираем релевантные публикации по теме и помогаем оформить список
+        литературы без часов ручного поиска.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+<dialog id="source-table"><div class="table-top"><h2>Таблица источников</h2><button id="close-table" aria-label="Закрыть">×</button></div><table><thead><tr><th>№</th><th>Статьи</th><th>Оценка</th><th></th></tr></thead><tbody id="table-body"></tbody></table><button class="btn btn-primary" id="download-list">Экспорт в список</button></dialog><dialog id="account-info"><button id="close-account" aria-label="Закрыть">×</button><p>Это учебный прототип. Регистрация и вход пока недоступны. Источники сохраняются в этом браузере.</p></dialog><p id="notice" role="status" aria-live="polite"></p></body>
+</html>
