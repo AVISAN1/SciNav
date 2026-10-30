@@ -3,122 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Учебная HTML и CSS вёрстка SciNav по макету Figma.">
-  <title>SciNav — поиск научных источников</title>
+  <meta name="description" content="Учебная вёрстка SciNav по макету 03_Finaly. HTML и CSS без JavaScript.">
+  <title>SciNav — Главная</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Шапка: логотип и ссылки на разделы. -->
+  <!-- Шапка из макета. Кнопки пока не подключены к JavaScript. -->
   <header class="header">
-    <a class="logo" href="index.html">SciNav</a>
+    <div class="header-left">
+      <button class="menu-button" type="button" aria-label="Меню" aria-disabled="true"><svg viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M0 3h32M0 12h32M0 21h32"/></svg></button>
+      <a class="logo" href="index.html">SciNav</a>
+    </div>
     <nav class="navigation" aria-label="Основная навигация">
-      <a href="#search">Поиск</a>
-      <a href="#about">О проекте</a>
+      <a class="about-link" href="#about">о проекте</a>
+      <button class="login-button" type="button" aria-disabled="true">Войти</button>
+      <button class="register-button" type="button" aria-disabled="true">Зарегистрируйтесь</button>
     </nav>
   </header>
 
   <main>
-    <!-- Первый экран. -->
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title">Хватит искать<br>источники вручную</h1>
       <p>От темы до готового списка литературы — без ручного поиска по десяткам баз.</p>
       <a class="primary-button" href="#search">Попробуйте сейчас</a>
     </section>
 
-    <!-- Поле и кнопки пока показывают только внешний вид сервиса. -->
     <section class="search-section" id="search" aria-labelledby="search-title">
       <h2 class="visually-hidden" id="search-title">Поиск источников</h2>
       <div class="search-box">
         <div class="search-top"></div>
         <div class="search-field">
           <label class="visually-hidden" for="topic">Тема исследования</label>
-          <textarea id="topic" rows="3" placeholder="Введите тему исследования…">Влияние ИИ на дизайн.</textarea>
+          <textarea id="topic" rows="3" spellcheck="false">Влияние ии на дизайн.</textarea>
           <div class="search-bottom">
-            <span aria-hidden="true">◎</span>
-            <button class="search-button" type="button" aria-label="Поиск пока недоступен" disabled>→</button>
+            <span class="globe"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="16" cy="16" r="13"/><ellipse cx="16" cy="16" rx="5" ry="13"/><path d="M3 16h26"/></svg></span>
+            <button class="search-button" type="button" aria-label="Найти" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="filters" role="group" aria-label="Примеры фильтров">
-      <button class="filter active" type="button" aria-pressed="true" disabled>Все</button>
-      <button class="filter" type="button" disabled>Популярное</button>
-      <button class="filter" type="button" disabled>Новое</button>
-      <button class="filter" type="button" disabled>По дате</button>
-      <button class="filter" type="button" disabled>По релевантности</button>
+    <div class="filters" role="group" aria-label="Фильтры источников">
+      <button class="filter active" type="button" aria-pressed="true" aria-disabled="true">Все</button>
+      <button class="filter" type="button" aria-disabled="true">Популярное</button>
+      <button class="filter" type="button" aria-disabled="true">Новое</button>
+      <button class="filter" type="button" aria-disabled="true">По дате</button>
+      <button class="filter" type="button" aria-disabled="true">По релевантности</button>
     </div>
 
-    <!-- Grid: две колонки на компьютере, одна на телефоне. -->
     <section class="sources" aria-labelledby="sources-title">
-      <h2 class="visually-hidden" id="sources-title">Примеры источников</h2>
-      <p class="demo-note">Учебный макет без JavaScript. Карточки и оценки — примеры.</p>
+      <h2 class="visually-hidden" id="sources-title">Примеры источников из макета</h2>
       <div class="cards-grid">
         <article class="card">
           <div class="card-top">
-            <span class="document-icon" aria-hidden="true">▤</span>
-            <div>
-              <h3>Влияние искусственного интеллекта на современный дизайн</h3>
-              <p class="card-meta">Пример статьи · Автор · Год · Издание</p>
+            <span class="card-icon"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 2h9l6 6v17H5zM14 2v7h6M8 14h9M8 18h9M8 22h7"/></svg></span>
+            <div class="card-content">
+              <h3>Влияние социальных сетей на учебную мотивацию студентов</h3>
+              <p>А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
             </div>
           </div>
           <div class="card-bottom">
             <div class="card-actions">
-              <button class="small-button" type="button" disabled>Добавить в таблицу</button>
-              <button class="small-button" type="button" disabled>Экспорт</button>
+              <button class="add-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Добавить в таблицу</button>
+              <button class="export-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Экспорт</button>
             </div>
-            <span class="rating" title="Пример оценки из макета">8/10</span>
+            <span class="rating" title="Демонстрационная оценка из макета">8/10</span>
           </div>
         </article>
-
         <article class="card">
           <div class="card-top">
-            <span class="document-icon" aria-hidden="true">▤</span>
-            <div>
-              <h3>Искусственный интеллект в профессиях креативной индустрии</h3>
-              <p class="card-meta">Пример статьи · Автор · Год · Издание</p>
+            <span class="card-icon"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 2h9l6 6v17H5zM14 2v7h6M8 14h9M8 18h9M8 22h7"/></svg></span>
+            <div class="card-content">
+              <h3>Влияние социальных сетей на учебную мотивацию студентов</h3>
+              <p>А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
             </div>
           </div>
           <div class="card-bottom">
             <div class="card-actions">
-              <button class="small-button" type="button" disabled>Добавить в таблицу</button>
-              <button class="small-button" type="button" disabled>Экспорт</button>
+              <button class="add-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Добавить в таблицу</button>
+              <button class="export-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Экспорт</button>
             </div>
-            <span class="rating" title="Пример оценки из макета">8/10</span>
+            <span class="rating" title="Демонстрационная оценка из макета">8/10</span>
           </div>
         </article>
-
         <article class="card">
           <div class="card-top">
-            <span class="document-icon" aria-hidden="true">▤</span>
-            <div>
-              <h3>Цифровые инструменты в работе графического дизайнера</h3>
-              <p class="card-meta">Пример статьи · Автор · Год · Издание</p>
+            <span class="card-icon"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 2h9l6 6v17H5zM14 2v7h6M8 14h9M8 18h9M8 22h7"/></svg></span>
+            <div class="card-content">
+              <h3>Влияние социальных сетей на учебную мотивацию студентов</h3>
+              <p>А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
             </div>
           </div>
           <div class="card-bottom">
             <div class="card-actions">
-              <button class="small-button" type="button" disabled>Добавить в таблицу</button>
-              <button class="small-button" type="button" disabled>Экспорт</button>
+              <button class="add-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Добавить в таблицу</button>
+              <button class="export-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Экспорт</button>
             </div>
-            <span class="rating" title="Пример оценки из макета">8/10</span>
+            <span class="rating" title="Демонстрационная оценка из макета">8/10</span>
           </div>
         </article>
-
         <article class="card">
           <div class="card-top">
-            <span class="document-icon" aria-hidden="true">▤</span>
-            <div>
-              <h3>Роль дизайна в современном цифровом обществе</h3>
-              <p class="card-meta">Пример статьи · Автор · Год · Издание</p>
+            <span class="card-icon"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 2h9l6 6v17H5zM14 2v7h6M8 14h9M8 18h9M8 22h7"/></svg></span>
+            <div class="card-content">
+              <h3>Влияние социальных сетей на учебную мотивацию студентов</h3>
+              <p>А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
             </div>
           </div>
           <div class="card-bottom">
             <div class="card-actions">
-              <button class="small-button" type="button" disabled>Добавить в таблицу</button>
-              <button class="small-button" type="button" disabled>Экспорт</button>
+              <button class="add-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Добавить в таблицу</button>
+              <button class="export-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Экспорт</button>
             </div>
-            <span class="rating" title="Пример оценки из макета">8/10</span>
+            <span class="rating" title="Демонстрационная оценка из макета">8/10</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 2h9l6 6v17H5zM14 2v7h6M8 14h9M8 18h9M8 22h7"/></svg></span>
+            <div class="card-content">
+              <h3>Влияние социальных сетей на учебную мотивацию студентов</h3>
+              <p>А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-actions">
+              <button class="add-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Добавить в таблицу</button>
+              <button class="export-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Экспорт</button>
+            </div>
+            <span class="rating" title="Демонстрационная оценка из макета">8/10</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 2h9l6 6v17H5zM14 2v7h6M8 14h9M8 18h9M8 22h7"/></svg></span>
+            <div class="card-content">
+              <h3>Влияние социальных сетей на учебную мотивацию студентов</h3>
+              <p>А. И. Иванов, М. С. Петрова · 2022 · Название журнала</p>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-actions">
+              <button class="add-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Добавить в таблицу</button>
+              <button class="export-button" type="button" aria-disabled="true" title="Учебный макет без JavaScript">Экспорт</button>
+            </div>
+            <span class="rating" title="Демонстрационная оценка из макета">8/10</span>
           </div>
         </article>
       </div>
@@ -126,9 +155,12 @@
   </main>
 
   <footer class="footer" id="about">
-    <h2 class="visually-hidden">О проекте</h2>
-    <p>SciNav — навигатор по научным источникам для курсовых, дипломов и статей.
-      Подбираем релевантные публикации по теме и помогаем оформить список литературы.</p>
+    <div class="footer-inner">
+      <h2>О проекте</h2>
+      <p>SciNav — навигатор по научным источникам для курсовых, дипломов и статей.<br>
+        Подбираем релевантные публикации по теме и помогаем оформить список<br class="desktop-break">
+        литературы без часов ручного поиска.</p>
+    </div>
   </footer>
 </body>
 </html>
